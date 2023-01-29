@@ -1,14 +1,16 @@
 package org.example;
 
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
+
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MathLibTest extends MainTest {
 
     @Test
     public void sumTest(){
-        MatcherAssert.assertThat(MathLib.makeSum(1,2), Matchers.is(Matchers.equalTo(3)));
+        assertEquals(3, MathLib.makeSum(1,2));
     }
+
 
 }
