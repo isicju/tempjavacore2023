@@ -1,24 +1,29 @@
 package org.example;
 
 
-import org.apache.commons.io.FileUtils;
-
-import java.io.File;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
-
-    public static void main(String[] args) throws IOException {
-
-        File file = new File(args[0]);
-
-        System.out.println(MathLib.makeSum(1,2));
-
-        String result = FileUtils.readFileToString(file, StandardCharsets.UTF_8);
+//static
+    public static void main(String[] args) {
+        User peterUser = new User(12, "Peter");
+        User john = new User(13, "Peter");
+        User john3 = new User(13, "Peter");
 
 
-        System.out.println(result);
+        john.age = 13;
+        System.out.println("Peter age: "+ peterUser.age);
+
+
+
     }
+
+    private static void printMe(User user){
+
+
+    }
+
 
 }
